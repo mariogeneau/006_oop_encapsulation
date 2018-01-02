@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">006_oop_encapsulation</string>
+    <string name="app_name">MAD CONVERTER</string>
+    <string name="unit_to_convert">UNIT TO CONVERT</string>
+    <string name="convert_to_celsius">CONVERT TO CELSIUS</string>
+    <string name="button">Button</string>
+    <string name="convert_to_fahrenheit">CONVERT TO FAHRENHEIT</string>
+    <string name="result">RESULT</string>
 </resources>
