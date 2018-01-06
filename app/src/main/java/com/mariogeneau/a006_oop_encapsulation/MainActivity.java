@@ -9,8 +9,9 @@ import android.widget.TextView;
 //¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
 public class MainActivity extends AppCompatActivity {
     //------
-    UnitConverter unitConverter;
-    EditText temperature_field;
+    TemperatureConverter temperatureConverter;
+    DistanceConverter distanceConverter;
+    EditText unit_to_convert_field;
     TextView result_label;
     //------
     @Override
@@ -18,25 +19,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //---
-        unitConverter = new UnitConverter("0.0");
+        temperatureConverter = new TemperatureConverter("0.0");
+        distanceConverter = new DistanceConverter("0.0");
         //---
-        temperature_field = findViewById(R.id.temperature_field);
+        unit_to_convert_field = findViewById(R.id.unit_to_convert_field);
         result_label = findViewById(R.id.result_label);
     }
     //------
     public void convertFarToCell(View v) {
-        String s = String.valueOf(temperature_field.getText());
+        String s = String.valueOf(unit_to_convert_field.getText());
         double d = Double.parseDouble(s);
-        double c = unitConverter.convertFarToCell(d);
+        double c = temperatureConverter.convertFarToCell(d);
         s = String.valueOf(c);
         result_label.setText(s);
     }
     //------
     public void convertCellToFar(View v) {
-        String s = String.valueOf(temperature_field.getText());
+        String s = String.valueOf(unit_to_convert_field.getText());
         double d = Double.parseDouble(s);
-        double f = unitConverter.convertCellToFar(d);
+        double f = temperatureConverter.convertCellToFar(d);
         s = String.valueOf(f);
+        result_label.setText(s);
+    }
+    //------
+    public void convertMilesToKm(View v) {
+        String s = String.valueOf(unit_to_convert_field.getText());
+        double d = Double.parseDouble(s);
+        double c = distanceConverter.convertMilesToKm(d);
+        s = String.valueOf(c);
+        result_label.setText(s);
+    }
+    //------
+    public void convertKmToMiles(View v) {
+        String s = String.valueOf(unit_to_convert_field.getText());
+        double d = Double.parseDouble(s);
+        double c = distanceConverter.convertKmToMiles(d);
+        s = String.valueOf(c);
         result_label.setText(s);
     }
     //------

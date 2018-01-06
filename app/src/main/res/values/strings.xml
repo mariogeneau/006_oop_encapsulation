@@ -5,4 +5,6 @@
     <string name="button">Button</string>
     <string name="convert_to_fahrenheit">CONVERT TO FAHRENHEIT</string>
     <string name="result">RESULT</string>
+    <string name="convert_to_km">CONVERT TO KM</string>
+    <string name="convert_to_miles">CONVERT TO MILES</string>
 </resources>

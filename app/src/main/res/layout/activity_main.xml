@@ -8,12 +8,10 @@
 
     <ScrollView
         android:layout_width="585dp"
-        android:layout_height="810dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView"
@@ -37,7 +35,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/temperature_field"
+                android:id="@+id/unit_to_convert_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="350dp"
@@ -69,6 +67,30 @@
                 android:layout_marginTop="10dp"
                 android:onClick="convertCellToFar"
                 android:text="@string/convert_to_fahrenheit" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="350dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="350dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:onClick="convertMilesToKm"
+                android:text="@string/convert_to_km" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="350dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="350dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:onClick="convertKmToMiles"
+                android:text="@string/convert_to_miles" />
 
             <TextView
                 android:id="@+id/result_label"
